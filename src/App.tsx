@@ -40,7 +40,10 @@ const App = () => {
         type="button"
         onClick={() => {
           if (!name) alert('Please enter your name');
-          if (name) exportComponentAsPNG(printRef);
+          if (name)
+            exportComponentAsPNG(printRef, {
+              fileName: `thank-you-${name.split(' ').join('-')}`,
+            });
         }}
       >
         Print
