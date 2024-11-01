@@ -10,18 +10,39 @@ const App = () => {
   return (
     <>
       <div className="wrapper" ref={printRef}>
-        <div className="text">Hi {name}</div>
         <img src={IMG} alt="image" />
+        <div className="text">
+          <span className="name">Hi{' ' + name},</span>
+          Thank you for your generous contribution.
+          <br />
+          Your support means the world to me and, more importantly,
+          <br />
+          to the children and families who benefit from Starlight’s <br />
+          incredible programs.
+          <span className="special">
+            With heartfelt appreciation,
+            <br />
+            Pratistha
+          </span>
+        </div>
       </div>
 
       <label htmlFor="name">Name : </label>
+
       <input
         type="text"
         name="name"
         id="name"
         onChange={(e) => setName(e.target.value)}
       />
-      <button type="button" onClick={() => exportComponentAsPNG(printRef)}>
+
+      <button
+        type="button"
+        onClick={() => {
+          if (!name) alert('Please enter your name');
+          if (name) exportComponentAsPNG(printRef);
+        }}
+      >
         Print
       </button>
     </>
