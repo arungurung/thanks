@@ -1,0 +1,28 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text {
+    position: absolute;
+    color: black;
+    padding: 8px 24px;
+    width: 60%;
+    background-color: white;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    container-name: text;
+  }
+}
